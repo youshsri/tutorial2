@@ -7,6 +7,7 @@ import java.awt.event.WindowEvent;
 public class Drawing extends Canvas {
     private Frame f;
     private Circle c;
+    private Rect r;
 
     public Drawing(Circle c) {
 
@@ -29,6 +30,7 @@ public class Drawing extends Canvas {
 
     public void paint(Graphics g) {
         c.draw(g);
+        r.draw(g);
     }
 
 
