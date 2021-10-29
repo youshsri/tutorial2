@@ -1,14 +1,11 @@
 import java.awt.*;
 
-public class Rect {
-    private int width;
-    private int height;
-    private Point pos;
-    private Color col;
+public class Rect extends Shape {
+    protected int width;
+    protected int height;
 
-    public Rect(Point initPos, Color col, int width, int height) {
-        this.pos = initPos;
-        this.col = col;
+    Rect(Point pos, Color col, int width, int height) {
+        super(pos, col);
         this.width = width;
         this.height = height;
     }

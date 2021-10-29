@@ -6,13 +6,22 @@ import java.awt.event.WindowEvent;
 
 public class Drawing extends Canvas {
     private Frame f;
-    private Circle c;
-    private Rect r;
+    private Shape s;
 
-    public Drawing(Circle c) {
+    public Drawing(Shape s) {
 
-        this.c = c;
+        this.s = s;
 
+        setupFrame();
+        setupCanvas();
+    }
+
+    private void setupCanvas() {
+        setBackground(Color.WHITE);
+        setSize(400, 400);
+    }
+
+    private void setupFrame() {
         f = new Frame("My Window");
         f.add(this);
         f.setLayout(null);
@@ -24,13 +33,10 @@ public class Drawing extends Canvas {
                 f.dispose();
             }
         });
-        setBackground(Color.WHITE);
-        setSize(400, 400);
     }
 
     public void paint(Graphics g) {
-        c.draw(g);
-        r.draw(g);
+        s.draw(g);
     }
 
 
